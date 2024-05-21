@@ -18,7 +18,7 @@
      - export SSHFLAGS="-o LogLevel=ERROR -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i id_rsa_solaris"
      - export SCMD="ssh $SSHFLAGS -p 8989 root@localhost"
      - sleep 60
-     - while ! $SCMD ls ; do sleep 30 ; done
+     - while ! $SCMD ls ; do sleep 14 ; done
      - $SCMD 'bash -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"'
    script:
      - python scripts/amalgamation.py > /dev/null
